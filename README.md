@@ -40,7 +40,8 @@ How to start project
 ```bash
 npm install
 ```
-# 3. Start the development server
+<h3>Start the development server</h3>
+
 ```bash
 npm run dev
 ```
