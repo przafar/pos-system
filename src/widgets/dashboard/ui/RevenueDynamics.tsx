@@ -13,11 +13,36 @@ const CartesianGrid = dynamic(() => import("recharts").then(m => m.CartesianGrid
 const Tooltip = dynamic(() => import("recharts").then(m => m.Tooltip), { ssr: false });
 
 const daily = [
-  { name: "1", cash: 300_000, terminal: 200_000, other:  60_000 },
-  { name: "2", cash: 340_000, terminal: 400_000, other:  29_000 },
-  { name: "3", cash: 260_000, terminal: 100_000, other:  20_000 },
-  { name: "4", cash: 400_000, terminal: 200_000, other:  10_000 },
-  { name: "5", cash: 314_000, terminal: 500_000, other:  14_000 },
+  { 
+    name: "1", 
+    cash: 300_000,
+    terminal: 200_000,
+    other: 60_000
+  },
+  {
+    name: "2",
+    cash: 340_000,
+    terminal: 400_000,
+    other: 29_000
+  },
+  {
+    name: "3",
+    cash: 260_000,
+    terminal: 100_000,
+    other: 20_000
+  },
+  {
+    name: "4",
+    cash: 400_000,
+    terminal: 200_000,
+    other: 10_000
+  },
+  {
+    name: "5",
+    cash: 314_000,
+    terminal: 500_000,
+    other: 14_000
+  }
 ];
 
 const monthly = Array.from({ length: 6 }, (_, i) => ({

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import logo from "@shared/assets/image/logo.png";
 import { Separator, Button } from "@shared/ui";
+import Link from "next/link";
 
 import {
   ShoppingCart, CircleUser, Repeat, History, Settings, LifeBuoy, LogOut, X
@@ -11,12 +12,37 @@ import {
 import { cn } from "@shared/lib/utils";
 
 const items = [
-  { icon: ShoppingCart, label: "Kassa", href: "/kassa", active: true },
-  { icon: CircleUser, label: "Smena", href: "#" },
-  { icon: Repeat, label: "Z-hisobot", href: "#" },
-  { icon: History, label: "Tarix", href: "#" },
-  { icon: Settings, label: "Sozlamalar", href: "#" },
-  { icon: LifeBuoy, label: "Yordam", href: "#" },
+  { 
+    icon: ShoppingCart, 
+    label: "Kassa", 
+    href: "/kassa", 
+    active: true 
+  },
+  { 
+    icon: CircleUser, 
+    label: "Smena", 
+    href: "/home" 
+  },
+  { 
+    icon: Repeat, 
+    label: "Z-hisobot", 
+    href: "/home" 
+  },
+  { 
+    icon: History, 
+    label: "Tarix", 
+    href: "/home" 
+  },
+  { 
+    icon: Settings, 
+    label: "Sozlamalar", 
+    href: "/home" 
+  },
+  { 
+    icon: LifeBuoy, 
+    label: "Yordam", 
+    href: "/home" 
+  },
 ];
 
 type Props = {
@@ -28,7 +54,7 @@ export function SidebarNav({ open, onClose }: Props) {
   const router = useRouter();
   const handleLogout = () => {
     document.cookie = "access_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    router.push("/login"); // редиректим
+    router.push("/login");
   };
   return (
     <div
@@ -53,10 +79,12 @@ export function SidebarNav({ open, onClose }: Props) {
         )}
       >
         <div className="px-5 py-4 flex items-center justify-between border-b">
-          <div className="flex items-center gap-3">
-            <Image src={logo} alt="Virtual kassa" width={28} height={28} />
-            <span className="text-lg font-semibold text-[#25567e]">Virtual kassa</span>
-          </div>
+           <Link href="/home" className="flex items-center gap-3">
+              <Image src={logo} alt="Virtual kassa" width={28} height={28} />
+              <span className="text-lg font-semibold text-[#25567e]">
+                Virtual kassa
+              </span>
+            </Link>
           <Button variant="ghost" size="icon" onClick={onClose}>
             <X />
           </Button>

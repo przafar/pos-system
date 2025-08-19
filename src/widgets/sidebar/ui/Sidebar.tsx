@@ -10,22 +10,58 @@ import {
 } from "lucide-react";
 
 type Props = {
-  open: boolean;         // для мобилки
-  collapsed: boolean;    // для десктопа
+  open: boolean;
+  collapsed: boolean;
   onClose: () => void;
   onToggleCollapse: () => void;
 };
 
 const items = [
-  { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Malumot", href: "/malumot", icon: FileText },
-  { label: "Kassalar", href: "/kassalar", icon: Store },
-  { label: "Kategoriyalar", href: "/kategoriyalar", icon: Tags },
-  { label: "Mahsulotlar", href: "/mahsulotlar", icon: Package },
-  { label: "Cheklar", href: "/cheklar", icon: Receipt },
-  { label: "Z-Hisobot", href: "/z-hisobot", icon: BookA },
-  { label: "Foydalanuvchilar", href: "/users", icon: Users },
-  { label: "EHF", href: "/ehf", icon: FileSpreadsheet },
+  { 
+    label: "Dashboard", 
+    href: "/dashboard", 
+    icon: LayoutDashboard 
+  },
+  { 
+    label: "Malumot", 
+    href: "/malumot", 
+    icon: FileText 
+  },
+  { 
+    label: "Kassalar", 
+    href: "/kassalar", 
+    icon: Store 
+  },
+  { 
+    label: "Kategoriyalar", 
+    href: "/kategoriyalar", 
+    icon: Tags 
+  },
+  { 
+    label: "Mahsulotlar", 
+    href: "/mahsulotlar", 
+    icon: Package 
+  },
+  { 
+    label: "Cheklar", 
+    href: "/cheklar", 
+    icon: Receipt 
+  },
+  { 
+    label: "Z-Hisobot", 
+    href: "/z-hisobot", 
+    icon: BookA 
+  },
+  { 
+    label: "Foydalanuvchilar", 
+    href: "/users", 
+    icon: Users 
+  },
+  { 
+    label: "EHF", 
+    href: "/ehf", 
+    icon: FileSpreadsheet 
+  },
 ];
 
 export function Sidebar({ open, collapsed, onClose, onToggleCollapse }: Props) {
@@ -42,7 +78,6 @@ export function Sidebar({ open, collapsed, onClose, onToggleCollapse }: Props) {
 
   return (
     <>
-      {/* overlay только для мобилки */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black/40 transition-opacity lg:hidden",
@@ -54,16 +89,13 @@ export function Sidebar({ open, collapsed, onClose, onToggleCollapse }: Props) {
       <aside
         className={cn(
           "fixed top-0 left-0 h-screen bg-[#0f2e46] text-white flex flex-col border-r border-black/10 z-50",
-          // ширина плавно меняется только на десктопе
           "transition-[width] duration-300 ease-in-out",
           collapsed ? "w-20" : "w-72",
-          // смещение только на мобилке
           "transform transition-transform duration-300 ease-in-out",
           open ? "translate-x-0" : "-translate-x-full",
           "lg:translate-x-0"
         )}
       >
-        {/* header */}
         <div className="p-4 flex items-center gap-3">
           {!collapsed && (
             <>
@@ -89,7 +121,6 @@ export function Sidebar({ open, collapsed, onClose, onToggleCollapse }: Props) {
           </button>
         </div>
 
-        {/* menu */}
         <nav className="px-3 flex-1 overflow-y-auto">
           {items.map(({ href, icon: Icon, label }) => {
             const active = pathname?.startsWith(href);
@@ -111,7 +142,6 @@ export function Sidebar({ open, collapsed, onClose, onToggleCollapse }: Props) {
           })}
         </nav>
 
-        {/* logout */}
         <div className="p-3">
           <button
             onClick={handleLogout}

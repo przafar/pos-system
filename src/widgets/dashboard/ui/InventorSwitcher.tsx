@@ -9,13 +9,39 @@ type LowStockRow = { id: number; title: string; unit: string; left: string; stat
 type BestRow = { id: number; title: string; unit: string; sold: string; share: number; trendPct: number };
 
 const LOW_STOCK: LowStockRow[] = [
-  { id: 1, title: "Nok",    unit: "KG",  left: "20kg",  status: "Kam"   },
-  { id: 2, title: "Ruchka", unit: "dona",left: "20dona",status: "Kritik"},
+  { 
+    id: 1, 
+    title: "Nok",
+    unit: "KG",
+    left: "20kg",
+    status: "Kam"
+  },
+  {
+    id: 2,
+    title: "Ruchka",
+    unit: "dona",
+    left: "20dona",
+    status: "Kritik"
+  }
 ];
 
 const BEST_SELLERS_BASE: BestRow[] = [
-  { id: 1, title: "Olma", unit: "kg",  sold: "55kg", share: 7_500_000, trendPct: 12 },
-  { id: 2, title: "Sut",  unit: "Litr",sold: "40L",  share: 6_500_000, trendPct: -3 },
+  {
+    id: 1,
+    title: "Olma",
+    unit: "kg",
+    sold: "55kg",
+    share: 7_500_000,
+    trendPct: 12
+  },
+  {
+    id: 2,
+    title: "Sut",
+    unit: "Litr",
+    sold: "40L",
+    share: 6_500_000,
+    trendPct: -3
+  },
 ];
 
 function money(n: number) {

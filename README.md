@@ -11,6 +11,8 @@
 <p align="center">
     <img src="https://firebasestorage.googleapis.com/v0/b/greencard-fc6ee.appspot.com/o/Screenshot%202025-08-18%20at%2022.34.40.png?alt=media&token=ffcb9a24-266f-486a-80be-d43e14566c16" alt="Image Example" width="400px">
     <img src="https://firebasestorage.googleapis.com/v0/b/greencard-fc6ee.appspot.com/o/Screenshot%202025-08-18%20at%2022.34.56.png?alt=media&token=29939549-7e07-4737-add4-8f51d00416f0" alt="Image Example" width="400px">
+    <img src="https://firebasestorage.googleapis.com/v0/b/greencard-fc6ee.appspot.com/o/Screenshot%202025-08-19%20at%2023.57.07.png?alt=media&token=714483c6-c6f4-401b-8f7f-ac73cc3db1c9" alt="Image Example" width="400px">
+    <img src="https://firebasestorage.googleapis.com/v0/b/greencard-fc6ee.appspot.com/o/Screenshot%202025-08-19%20at%2023.57.34.png?alt=media&token=5ec4ff2e-7759-4e97-af94-34604797a2c9" alt="Image Example" width="400px">
 </p>
 
 <h2 id="technologies">💻 Technologies</h2>
@@ -45,5 +47,13 @@ npm install
 ```bash
 npm run dev
 ```
+
+<h2 id="routes">🛣️ Routes</h2>
+
+The application provides the following main routes:
+
+- `/home` – Home page with an overview
+- `/login` – Authentication page
+- `/kassa` – POS module (cash register)
 
 
