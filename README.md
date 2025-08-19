@@ -52,7 +52,7 @@ npm run dev
 
 The application provides the following main routes:
 
-- `/home` – Home page with an overview
+- `/home` – Home page with dashboard
 - `/login` – Authentication page
 - `/kassa` – POS module (cash register)
 
