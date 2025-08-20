@@ -32,7 +32,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       />
 
       <div className={cn("transition-all", collapsed ? "lg:pl-20" : "lg:pl-72")}>
-        
 
         <main className="p-3 lg:p-2">{children}</main>
       </div>

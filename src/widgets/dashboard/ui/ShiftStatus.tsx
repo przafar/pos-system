@@ -2,7 +2,13 @@
 
 import { Card, CardContent, Button } from "@shared/ui";
 import {
-  Clock3, MonitorSmartphone, CreditCard, Wallet, User, Hash, CheckCircle2
+  Clock3, 
+  MonitorSmartphone, 
+  CreditCard, 
+  Wallet, 
+  User, 
+  Hash, 
+  CheckCircle2
 } from "lucide-react";
 
 type Props = {
